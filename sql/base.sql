@@ -23,3 +23,15 @@ create table if not exists doctor_day_data
     INDEX `month`(`month`) USING BTREE,
     INDEX `day`(`day`) USING BTREE
 ) engine = InnoDB auto_increment = 1 comment '医生数据统计表' charset = utf8mb4;
+
+
+create table if not exists menu (
+    id int auto_increment,
+    code varchar(32) null comment '菜单编码',
+    name varchar(32) null comment '菜单名称',
+    createtime datetime null comment '创建时间',
+    creater varchar(32) null comment '创建人',
+    modifytime datetime null comment '修改时间',
+    moditer varchar(32) null comment '修改人 ',
+    PRIMARY KEY (`id`) USING BTREE
+) engine = InnoDB auto_increment = 1 comment '操作菜单表';
